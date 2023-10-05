@@ -1,0 +1,121 @@
+.movieRate__circl_red {
+  min-width: 35px;
+  min-height: 35px;
+  border: 2px solid #e90000;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 1);
+}
+.movieRate__circl_or {
+  min-width: 35px;
+  min-height: 35px;
+  border: 2px solid #e97e00;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 1);
+}
+.movieRate__circl_yl {
+  min-width: 35px;
+  min-height: 35px;
+  border: 2px solid #e9d100;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 1);
+}
+.movieRate__circl_gr {
+  min-width: 35px;
+  min-height: 35px;
+  border: 2px solid #66e900;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 1);
+}
+.movieItem__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-direction: row;
+}
+.movieItem {
+  border: 0px solid;
+  width: 451px;
+  height: 279px;
+
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.15);
+}
+@media screen and (max-width: 420px) {
+  .movieItem {
+    width: 388px;
+    height: 245px;
+  }
+}
+.movieItem__img {
+  height: 277px;
+  border: 0px solid;
+  width: 190px;
+}
+@media screen and (max-width: 420px) {
+  .movieItem__img {
+    height: 91px;
+
+    width: 60px;
+  }
+}
+
+.movieItem__info {
+  padding-left: 15px;
+  padding-right: 20px;
+}
+.movieItem__title {
+  margin: 0;
+  margin-top: 5px;
+  font-size: 20px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 1);
+}
+.movieItem__date {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 22px;
+  color: rgba(130, 126, 126, 1);
+}
+.movieItem__genre {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0;
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.65);
+}
+.movieItem__genre p {
+  margin: 0;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  border: 1px solid;
+  padding: 3px;
+  border-color: rgba(217, 217, 217, 1);
+  background-color: rgba(250, 250, 250, 1);
+}
+.movieItem__description {
+  font-size: 12px;
+  line-height: 22px;
+  margin: 0;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.movieItem__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.movieItem__rate {
+  margin-bottom: 10px;
+}
