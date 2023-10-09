@@ -9,7 +9,7 @@ import SearchMovie from '../SearchMovie/SearchMovie'
 import Spiner from '../Spiner/spiner'
 import ErrorMovie from '../Error/errorMovie'
 import { GenreProvider } from '../GenreContext'
-import '../Scss/style.scss'
+import '../Scss/app.scss'
 
 export default class App extends Component {
   movieService = new MovieService()

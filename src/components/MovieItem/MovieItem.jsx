@@ -2,6 +2,7 @@ import React from 'react'
 import { Row, Col, Rate } from 'antd'
 import { format } from 'date-fns'
 
+import '../Scss/MovieItem.scss'
 import MovieService from '../../Services/MovieService'
 import { GenreConsumer } from '../GenreContext'
 
