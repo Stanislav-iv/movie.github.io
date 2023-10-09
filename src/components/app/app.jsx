@@ -8,7 +8,7 @@ import MovieRate from '../MovieRate/MovieRate'
 import SearchMovie from '../SearchMovie/SearchMovie'
 import Spiner from '../Spiner/spiner'
 import ErrorMovie from '../Error/errorMovie'
-import { GenreProvider } from '../GenreContext'
+import { GenreProvider } from '../genreContext'
 import '../Scss/app.scss'
 
 export default class App extends Component {
