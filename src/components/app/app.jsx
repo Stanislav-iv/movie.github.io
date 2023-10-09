@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 import { Pagination, Row, Tabs } from 'antd'
 import { debounce } from 'lodash'
 
-import MovieService from '../../services/MovieService'
+import MovieService from '../../Services/MovieService'
 import MovieList from '../MovieList/MovieList'
 import MovieRate from '../MovieRate/MovieRate'
 import SearchMovie from '../SearchMovie/SearchMovie'
-import Spiner from '../spiner/spiner'
-import ErrorMovie from '../error/errorMovie'
-import { GenreProvider } from '../genreContext'
-import './app.css'
+import Spiner from '../Spiner/spiner'
+import ErrorMovie from '../Error/errorMovie'
+import { GenreProvider } from '../GenreContext'
+import '../Scss/style.scss'
 
 export default class App extends Component {
   movieService = new MovieService()
@@ -23,6 +23,7 @@ export default class App extends Component {
     moviesRate: [],
     genre: [],
   }
+
   componentDidMount() {
     this.onSession()
 
@@ -45,6 +46,7 @@ export default class App extends Component {
   async updateRate(session) {
     try {
       const res = await this.movieService.getRate(session)
+
       this.setState({
         moviesRate: res.results,
       })
@@ -100,7 +102,13 @@ export default class App extends Component {
     const spinner = loading ? <Spiner /> : null
     const notLoading = movies.length === 0 ? <p> not results</p> : null
     const view = hasData ? (
-      <MovieList movies={movies} textView={this.textView} getSession={getSession} ratePost={this.ratePost} />
+      <MovieList
+        movies={movies}
+        textView={this.textView}
+        getSession={getSession}
+        ratePost={this.ratePost}
+        moviesRate={moviesRate}
+      />
     ) : null
 
     return (
@@ -122,6 +130,7 @@ export default class App extends Component {
               <Pagination
                 onChange={(page) => {
                   this.updateMovie(this.state.value, page)
+                  this.updateRate(getSession)
                 }}
                 defaultCurrent={1}
                 total={totalPages}
