@@ -3,8 +3,8 @@ import { Row, Col, Rate } from 'antd'
 import { format } from 'date-fns'
 
 import '../Scss/MovieItem.scss'
-import MovieService from '../../Services/MovieService'
-import { GenreConsumer } from '../GenreContext'
+import MovieService from '../../services/MovieService'
+import { GenreConsumer } from '../genreContext'
 
 const MovieItem = ({
   title,
