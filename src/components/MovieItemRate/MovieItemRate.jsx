@@ -2,8 +2,8 @@ import React from 'react'
 import { Row, Col, Rate } from 'antd'
 import { format } from 'date-fns'
 
-import MovieService from '../../Services/MovieService'
-import { GenreConsumer } from '../GenreContext'
+import MovieService from '../../services/MovieService'
+import { GenreConsumer } from '../genreContext'
 
 const MovieItemRate = ({
   title,
