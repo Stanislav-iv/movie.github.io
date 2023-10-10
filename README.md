@@ -1,1 +1,1 @@
-https://movies-github-io.vercel.app/
+https://movie-github-io-six.vercel.app/
